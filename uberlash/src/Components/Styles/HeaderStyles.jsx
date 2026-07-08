@@ -1,12 +1,5 @@
 import styled from "styled-components";
 
-export const Header = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-`;
-
 export const Header_Items = styled.div`
   width: 70%;
   display: flex;
@@ -48,7 +41,6 @@ export const Logo_Container = styled.div`
 
   small {
     color: #e72b84;
-    background-color: white;
     border-radius: 5px;
     text-transform: uppercase;
     padding-top: 0.275rem;
@@ -73,7 +65,7 @@ export const NavBar = styled.nav`
   display: flex;
   gap: 2rem;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
   padding: 0.5rem 0 0.5rem 0;
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
@@ -87,9 +79,10 @@ export const NavBar = styled.nav`
   a {
     display: inline-block;
     position: relative;
-    text-decoration: none;
     color: #e72b84;
+    cursor: pointer;
   }
+
   a::after {
     content: "";
     position: absolute;
@@ -107,8 +100,3 @@ export const NavBar = styled.nav`
     transform: scaleX(1);
   }
 `;
-// FIM HEADER
-
-export const Main = styled.main`
-  
-`

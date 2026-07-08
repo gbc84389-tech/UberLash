@@ -8,9 +8,36 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     body {
-        height: 100%;
+        min-height: 100vh;
         background-color: white;
         font-family: Arial, Helvetica, sans-serif;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: sticky;
+        top: 0;
+        background-color: white;
+        z-index: 1000;
+    }
+
+    main {
+        min-height: 100vh;
+        padding: 0 10rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    footer {
+        min-height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 
     h1 {
@@ -32,6 +59,8 @@ export const GlobalStyles = createGlobalStyle`
     a {
         font-size: 0.875rem;
         font-weight: 400;
+        text-decoration: none;
+        color: inherit;
     }
 
     small {

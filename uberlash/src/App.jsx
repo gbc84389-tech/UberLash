@@ -1,47 +1,38 @@
 import { GlobalStyles } from './Components/Styles/GlobalStyles';
-import { Header, NavBar, Header_Items, Logo_Container, Search_Container, Shopping_Cart, Main} from './Components/Styles/Styles';
+import { Routes, Route } from "react-router-dom";
+import Main from './Components/Pages/Main';
+import Acessorios from './Components/Pages/Acessorios';
+import Adesivo from './Components/Pages/Adesivos';
+import Blog from './Components/Pages/Blog';
+import Cilios from './Components/Pages/Cilios';
+import Kits from './Components/Pages/Kits';
+import Marcas from './Components/Pages/Marcas';
+import Pincas from './Components/Pages/Pincas';
+import Produtos from './Components/Pages/Produtos';
+import Rastreio from './Components/Pages/Rastreio';
+import Tratamentos from './Components/Pages/Tratamentos';
+import Footer from './Components/Footer';
+import Header from './Components/Header';
 
 function App() {
   return (
     <>
-      <GlobalStyles></GlobalStyles>
-      <Header>
-        <Header_Items>
-          
-          <Search_Container>
-            <input type="text" placeholder='BUSCAR'/>
-          </Search_Container>
-
-          <Logo_Container>
-            <h2>UberLash</h2>
-            <small>loja das lashes</small>
-          </Logo_Container>
-
-          <Shopping_Cart>
-            <img src="src/Images/user.png" alt="Person Logo" />
-            <img src="src/Images/shopping-cart.png" alt="Shopping Cart Logo" />
-          </Shopping_Cart>
-        </Header_Items>
-        <NavBar>
-          <div>
-            <a href="">Inicio</a>
-            <a href="">Produtos</a>
-            <a href="">cilios</a>
-            <a href="">Tratamentos</a>
-            <a href="">Acessorios</a>
-            <a href="">Pincas</a>
-            <a href="">Adesivos e colas</a>
-            <a href="">Marcas</a>
-            <a href="">Kits</a>
-            <a href="">Blog</a>
-            <a href="">Rastreio</a>
-          </div>
-        </NavBar>
-      </Header>
-
-      <Main>
-        
-      </Main>
+    <GlobalStyles></GlobalStyles>
+      <Header></Header>
+    <Routes>
+      <Route path='/' element={<Main />} />
+      <Route path='/produtos' element={<Produtos />} />
+      <Route path='/cilios' element={<Cilios />} />
+      <Route path='/tratamentos' element={<Tratamentos />} />
+      <Route path='/acessorios' element={<Acessorios />} />
+      <Route path='/pincas' element={<Pincas />} />
+      <Route path='/adesivos' element={<Adesivo />} />
+      <Route path='/marcas' element={<Marcas />} />
+      <Route path='/kits' element={<Kits />} />
+      <Route path='/blog' element={<Blog />} />
+      <Route path='/rastreio' element={<Rastreio />} />
+    </Routes>
+      <Footer></Footer>
     </>
   )
 }
